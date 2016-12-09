@@ -1,0 +1,6 @@
+FROM centos:7
+MAINTAINER Frédéric Pirson
+
+
+EXPOSE  8180 9990 8787 8009
+
