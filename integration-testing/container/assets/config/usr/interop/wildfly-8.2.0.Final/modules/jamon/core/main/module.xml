@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="jamon.core">
+    <resources>
+        <resource-root path="jamon-2.81.jar"/> 
+    </resources>
+    <dependencies>
+        <module name="javaee.api"/>
+		<module name="net.sourceforge.jtds"/>
+    </dependencies>
+</module>

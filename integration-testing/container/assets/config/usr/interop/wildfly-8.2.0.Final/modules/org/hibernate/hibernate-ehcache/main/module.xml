@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.3" name="org.hibernate.hibernate-ehcache">
+    <resources>
+        <resource-root path="hibernate-ehcache-4.3.7.Final.jar"/>
+    </resources>
+    <dependencies>
+        <module name="org.jboss.logging"/>
+		<module name="org.hibernate" />
+		<module name="net.sf.ehcache.ehcache-core" />
+		<module name="javaee.api" />
+    </dependencies>
+</module>

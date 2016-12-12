@@ -1,0 +1,1 @@
+yum install -y unzip createrepo initscripts dos2unix sudo patch wget
