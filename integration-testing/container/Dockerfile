@@ -34,7 +34,7 @@ RUN mkdir /project
 
 
 ADD ./assets /tmp/assets/
-RUN chown -R root:root /tmp/assets
+RUN chmod +x /tmp/assets/scripts/*
 
 RUN /tmp/assets/scripts/install-common.sh
 RUN dos2unix /tmp/assets/scripts/*
