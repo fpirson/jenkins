@@ -3,7 +3,7 @@
 echo "Download Java"
 yum clean metadata
 echo "minrate=1" >> /etc/yum.conf
-echo "timeout=100" >> /etc/yum.conf
+echo "timeout=500" >> /etc/yum.conf
 
 yum install -y java-1.7.0-openjdk
 
