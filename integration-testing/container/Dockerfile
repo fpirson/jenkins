@@ -31,19 +31,17 @@ ENV ROOT_JBOSS_HOME $JBOSS_DESTINATION_DIRECTORY/wildfly-8.2.0.Final
 ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.111-2.6.7.2.el7_2.x86_64/jre
 ENV JAVA_OPTS "-server -Xms256m -Xmx2048m -XX:MaxPermSize=1024m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.remoting.pooled-buffers=false"
 RUN mkdir /project
-#RUN yum --disableplugin=fastestmirror update
 
+ADD ./assets /tmp/assets/
+RUN chmod +x /tmp/assets/scripts/*
 
-#ADD ./assets /tmp/assets/
-#RUN chmod +x /tmp/assets/scripts/*
+RUN /tmp/assets/scripts/install-common.sh
+RUN dos2unix /tmp/assets/scripts/*
+RUN /tmp/assets/scripts/install-java.sh
+RUN /tmp/assets/scripts/install-jboss.sh
 
-#RUN /tmp/assets/scripts/install-common.sh
-#RUN dos2unix /tmp/assets/scripts/*
-#RUN /tmp/assets/scripts/install-java.sh
-#RUN /tmp/assets/scripts/install-jboss.sh
-
-#RUN /usr/bin/cp -rf /tmp/assets/config /
-#RUN rm -rf /tmp/*
+RUN /usr/bin/cp -rf /tmp/assets/config /
+RUN rm -rf /tmp/*
 
 EXPOSE  8180 9990 8787 8009 8080
 
