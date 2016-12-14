@@ -18,7 +18,8 @@ echo "Create JBoss folders structure"
 mkdir -p $ROOT_JBOSS_HOME
 
 echo "Unzip JBoss"
-tar -zxvf wildfly-8.2.0.Final.tar.gz -C $JBOSS_DESTINATION_DIRECTORY
+#tar -zxvf wildfly-8.2.0.Final.tar.gz -C $JBOSS_DESTINATION_DIRECTORY
+mv /tmp/wildfly-8.2.0.Final $JBOSS_DESTINATION_DIRECTORY
 
 chown -R $USER_JBOSS:$USER_JBOSS $ROOT_JBOSS_HOME
 
