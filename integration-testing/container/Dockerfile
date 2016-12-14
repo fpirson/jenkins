@@ -1,7 +1,6 @@
 FROM centos:7
 MAINTAINER Frédéric Pirson
 
-
 ARG PROXY_HOST
 ARG PROXY_PORT
 
@@ -34,14 +33,13 @@ RUN mkdir /project
 
 ADD ./assets /tmp/assets/
 RUN chmod +x /tmp/assets/scripts/*
-
 RUN /tmp/assets/scripts/install-common.sh
 RUN dos2unix /tmp/assets/scripts/*
 RUN /tmp/assets/scripts/install-java.sh
+ADD /tmp/wildfly-8.2.0.Final.tar.gz /tmp/wildfly-8.2.0.Final.tar.gz
 RUN /tmp/assets/scripts/install-jboss.sh
 
 RUN /usr/bin/cp -rf /tmp/assets/config /
 RUN rm -rf /tmp/*
 
-EXPOSE  8180 9990 8787 8009 8080
 

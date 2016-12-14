@@ -6,7 +6,7 @@ echo "Download JBoss"
 echo "Packages required for JBoss installation"
 echo "initscripts - for running service"
 cd /tmp
-wget http://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.tar.gz
+#wget http://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.tar.gz
 
 echo "Create new jboss user"
 
