@@ -36,7 +36,7 @@ RUN chmod +x /tmp/assets/scripts/*
 RUN /tmp/assets/scripts/install-common.sh
 RUN dos2unix /tmp/assets/scripts/*
 RUN /tmp/assets/scripts/install-java.sh
-ADD /tmp/wildfly-8.2.0.Final.tar.gz /tmp/wildfly-8.2.0.Final.tar.gz
+ADD ./wildfly-8.2.0.Final.tar.gz /tmp/wildfly-8.2.0.Final.tar.gz
 RUN /tmp/assets/scripts/install-jboss.sh
 
 RUN /usr/bin/cp -rf /tmp/assets/config /
