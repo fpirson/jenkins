@@ -48,12 +48,12 @@ RUN /tmp/assets/scripts/install-jboss.sh
 RUN /usr/bin/cp -rf /tmp/assets/config /
 
 #Enable entrypoint execution
-RUN chmod +x /jboss-entrypoint.sh
+RUN chmod +x /usr/interop/wildfly-8.2.0.Final/jboss-entrypoint.sh
 
 #Cleaning
 RUN rm -rf /tmp/*
 
 EXPOSE 8080 9990 8787
-ENTRYPOINT ["/bin/bash", "/jboss-entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/usr/interop/wildfly-8.2.0.Final/jboss-entrypoint.sh"]
 
 
