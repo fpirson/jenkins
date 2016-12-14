@@ -48,7 +48,7 @@ RUN /tmp/assets/scripts/install-jboss.sh
 RUN /usr/bin/cp -rf /tmp/assets/config /
 
 #Enable entrypoint execution
-chmod +x /jboss-entrypoint.sh
+RUN chmod +x /jboss-entrypoint.sh
 
 #Cleaning
 RUN rm -rf /tmp/*
