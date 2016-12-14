@@ -218,7 +218,6 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
             <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="3000"/>
-			<deployment-scanner path="deployments-from-out" relative-to="jboss.server.base.dir" scan-interval="3000"/>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:ee:2.0">
             <spec-descriptor-property-replacement>true</spec-descriptor-property-replacement>

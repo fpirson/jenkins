@@ -45,15 +45,15 @@ ADD ./wildfly-8.2.0.Final.tar.gz /tmp/
 RUN /tmp/assets/scripts/install-jboss.sh
 
 # Copy configuration files
-RUN /usr/bin/cp -rf /tmp/assets/config /
+RUN /usr/bin/cp -rf /tmp/assets/config/* /
 
 #Enable entrypoint execution
-RUN chmod +x /usr/interop/wildfly-8.2.0.Final/jboss-entrypoint.sh
+RUN chmod +x /jboss-entrypoint.sh
 
 #Cleaning
 RUN rm -rf /tmp/*
 
 EXPOSE 8080 9990 8787
-ENTRYPOINT ["/bin/bash", "/usr/interop/wildfly-8.2.0.Final/jboss-entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/jboss-entrypoint.sh"]
 
 
