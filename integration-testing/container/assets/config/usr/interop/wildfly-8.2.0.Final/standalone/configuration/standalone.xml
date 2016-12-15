@@ -180,7 +180,7 @@
                     </security>
                 </datasource>
                 <datasource jta="true" jndi-name="java:jboss/datasources/dcl_hub_datasource" pool-name="dcl_hub_datasource" enabled="true" spy="true" use-ccm="true">
-                    <connection-url>jdbc:h2:tcp://localhost:1521/~/test;MODE=MSSQLServer</connection-url>
+                    <connection-url>jdbc:h2:tcp://localhost:1521/dclh-hub;MODE=MSSQLServer</connection-url>
                     <driver>h2</driver>
                     <security>
                         <user-name>liquibase</user-name>
